@@ -340,7 +340,7 @@
 #define ERR_FS_PLOAD    12  // It was attempted to load a preset that does not exist
 #define ERR_FS_IRLOAD   13  // It was attempted to load an IR JSON cmd, but the "ir.json" file does not exist
 #define ERR_FS_RMLOAD   14  // It was attempted to load an remote JSON cmd, but the "remote.json" file does not exist
-#define ERR_FS_GENERAL  19  // A general unspecified filesystem error occurred
+#define ERR_FS_GENERAL  19  // A general unspecified filesystem error occured
 #define ERR_OVERTEMP    30  // An attached temperature sensor has measured above threshold temperature (not implemented)
 #define ERR_OVERCURRENT 31  // An attached current sensor has measured a current above the threshold (not implemented)
 #define ERR_UNDERVOLT   32  // An attached voltmeter has measured a voltage below the threshold (not implemented)
@@ -369,7 +369,7 @@
 #define SUBPAGE_JS              254
 #define SUBPAGE_WELCOME         255
 
-#define NTP_PACKET_SIZE 48       // size of NTP receive buffer
+#define NTP_PACKET_SIZE 48       // size of NTP recive buffer
 #define NTP_MIN_PACKET_SIZE 48   // min expected size - NTP v4 allows for "extended information" appended to the standard fields
 
 //maximum number of rendered LEDs - this does not have to match max. physical LEDs, e.g. if there are virtual busses
@@ -494,7 +494,7 @@
 
 // HW_PIN_SCL & HW_PIN_SDA are used for information in usermods settings page and usermods themselves
 // which GPIO pins are actually used in a hardware layout (controller board)
-//WLEDMM: unchangeable pins are not treated here by undef them, but elsewhere in the code 
+//WLEDMM: unchangeable pins are not treated here by undef them, but elsewhere in the code
 // defaults for 1st I2C on ESP32 (Wire global)
 #ifndef HW_PIN_SCL
   #define HW_PIN_SCL -1 //WLEDMM if not defined, -1 will be used (not SCL/22) (also for esp8266?)
@@ -505,7 +505,7 @@
 
 // HW_PIN_SCLKSPI & HW_PIN_MOSISPI & HW_PIN_MISOSPI are used for information in usermods settings page and usermods themselves
 // which GPIO pins are actually used in a hardware layout (controller board)
-//WLEDMM: unchangeable pins are not treated here by undef them, but elsewhere in the code 
+//WLEDMM: unchangeable pins are not treated here by undef them, but elsewhere in the code
 // defaults for VSPI on ESP32 (SPI global, SPI.cpp) as HSPI is used by WLED (bus_wrapper.h)
 #ifndef HW_PIN_CLOCKSPI
   #define HW_PIN_CLOCKSPI -1 //WLEDMM if not defined -1 will be used (not SCK/18)
