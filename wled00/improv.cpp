@@ -193,7 +193,7 @@ void sendImprovIPRPCResult(ImprovRPCType type) {
 }
 
 void sendImprovInfoResponse() {
-  const char* bString = 
+  const char* bString =
     #ifdef ESP8266
       "esp8266"
     #elif CONFIG_IDF_TARGET_ESP32C3
